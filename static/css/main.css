@@ -1,0 +1,63 @@
+body{
+    background-color: red;
+}
+
+.title{
+    font-family: 'Lucida Sans';
+    color: white;
+    text-align: center;
+}
+
+.my-nav .navbar-brand{
+    color: #eb4f44;
+    color: white;
+    font-family: cursive;
+}
+
+.my-nav .btn{
+    color: white;
+    border-color: white;
+}
+
+#searchbar{
+
+}
+
+#button:hover{
+    background: transparent;
+    opacity: 0.8;
+}
+
+.youtube_logo{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#button2:hover{
+    background: transparent;
+    opacity: 0.7;
+}
+
+#button2{
+    border-color: white;
+    color: white;
+}
+
+.alert{
+    top: 1em;
+}
+
+.form-container{
+    margin-top: 5%;
+}
+
+input::placeholder{
+    font-size: 15px;
+}
+
+
+.text-center.hi{
+    font-size: 30px;
+    margin-top: 5%;
+    font-family: 'Lucida Sans';
+}

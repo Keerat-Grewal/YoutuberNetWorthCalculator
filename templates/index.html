@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YouTuber Net Worth Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+
+    <body>
+
+        <div class="my-nav">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="{{url_for('index')}}">YouTuber Net Worth Calculator</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0" method="post">
+                        <input class="form-control mr-sm-2" id="searchbar" type="search" name="name" placeholder="Search Your YouTuber..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" formaction="{{url_for('info')}}" id="button" name="button" type="submit" value="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="picture-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-danger center-block" role="alert">
+                                        <p class="text-center">
+                                            {{ message }}
+                                        </p>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">  
+                        <div class="youtube_logo">
+                            <img class="img-fluid" src="{{url_for('static', filename='youtube_logo.png')}}" alt="Youtube Logo" height="35%" width="35%">
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="container-fluid">
+                <form method="post">
+                    <div class="row justify-content-center">
+                        <div class="form-group col-sm-6">
+                            <input class="form-control input-lg" id="searchbar2" type="search" name="name" placeholder="Search Your YouTuber..." aria-label="Search">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-success my-2 my-sm-0" formaction="{{url_for('info')}}" id="button2" name="button" type="submit" value="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="text-center hi">
+                            Welcome to the YouTuber NetWorth Calculator!
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
